@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-no-void-return-type",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A rule that prevents void return turns on unexported functions.",
   "keywords": [
     "eslint",
