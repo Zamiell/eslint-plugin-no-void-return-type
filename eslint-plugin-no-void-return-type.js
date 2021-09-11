@@ -33,7 +33,11 @@ function noVoidReturnType(context) {
     FunctionDeclaration(node) {
       // Exported functions are exempt from this rule
       const { parent } = node;
-      if (parent !== undefined && parent.type === "ExportNamedDeclaration") {
+      if (
+        parent !== undefined &&
+        (parent.type === "ExportNamedDeclaration" ||
+          parent.type === "ExportDefaultDeclaration")
+      ) {
         return;
       }
 
